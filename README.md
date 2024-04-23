@@ -4,7 +4,7 @@
 
 ## En ligne
 
-<a href="https://kuroinekoo.github.io/KuroiNekOo-Invader/"><strong>Cube 3D</strong></a>
+<a href="https://kuroinekoo.github.io/KuroiNekOo-Cube-3D/"><strong>Cube 3D</strong></a>
 
 ## Présentation
 
