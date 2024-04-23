@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #262626;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+      }
+
+      .cube {
+        height: 300px;
+        width: 300px;
+        transform-style: preserve-3d;
+        position: relative;
+        transform: rotateY(303deg) rotateX(50deg) rotateZ(50deg);
+        transition: width 0.5s ease, height 0.5s ease;
+        animation: rotate 5s linear infinite;
+      }
+
+      .face {
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: transform 0.5s ease;
+      }
+
+      .front {
+        transform: translateZ(150px);
+        background-color: #d53a32;
+      }
+
+      .back {
+        background-color: #d53a32;
+        transform: rotateY(180deg) translateZ(150px);
+      }
+
+      .right {
+        background-color: #dd9b15;
+        transform: rotateY(90deg) translateZ(150px);
+      }
+
+      .left {
+        background-color: #dd9b15;
+        transform: rotateY(-90deg) translateZ(150px);
+      }
+
+      .top {
+        background-color: #1d9099;
+        transform: rotateX(90deg) translateZ(150px);
+      }
+
+      .bottom {
+        background-color: #1d9099;
+        transform: rotateX(-90deg) translateZ(150px);
+      }
+
+      /* .cube:hover {
+        animation: rotate 5s linear infinite;
+      } */
+
+      @keyframes rotate {
+        0% {
+          transform: rotateY(303deg) rotateX(50deg) rotateZ(50deg);
+        }
+
+        100% {
+          transform: rotateY(663deg) rotateX(410deg) rotateZ(410deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>
